@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,6 +12,7 @@
             margin: 0;
             padding: 0;
             background-color: #f4f4f4;
+            padding-bottom: 50px; /* Adjusted padding to accommodate the fixed footer */
         }
         header {
             background-color: #333;
@@ -45,6 +47,15 @@
             bottom: 0;
             width: 100%;
         }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            max-width: 100%;
+        }
+        #Mechanism_of_our_project, #services {
+            clear: both;
+        }
     </style>
 </head>
 <body>
@@ -60,7 +71,11 @@
 <header>
     <h1>Our Services</h1>
 </header>
-
+<section id="Mechanism_of_our_project">
+    <div class="image-container">
+        <img src="p1.png" alt="Mechanism of our project">
+    </div>
+</section>
 <section id="services">
     <h2>Services</h2>
     <form id="predictionForm">
