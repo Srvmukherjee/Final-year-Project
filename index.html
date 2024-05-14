@@ -1,150 +1,198 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage</title>
-    <style>
-        /* CSS styles for contact.html */
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 2%;
-            text-align: center;
-        }
-        nav {
-            background-color: #444;
-            color: #fff;
-            text-align: center;
-            padding: 10px 2%;
-        }
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 0 2%;
-        }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            background-color: #fff;
-            border-radius: 5px;
-            width: 90%;
-            max-width: 800px; /* Limiting the maximum width for better readability */
-            box-sizing: border-box;
-            overflow-x: auto; /* Horizontal scrollbar if content overflows */
-        }
-        footer {
-            background-color: #333;
-            color: #fff;
-            text-align: center;
-            padding: 10px 2%;
-            position: auto;
-            bottom: 0;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        #home h1 {
-            text-align: center;
-        }
-        .running-links {
-            padding: 10px 2%;
-            width: 90%;
-            max-width: 800px; /* Limiting the maximum width for better readability */
-            box-sizing: border-box;
-            margin: auto; /* Centering the element */
-        }
-        .running-links marquee {
-            width: 100%;
-        }
 
-        /* Responsive CSS */
-        @media only screen and (max-width: 768px) {
-            /* Adjust header padding */
-            header, nav {
-                padding: 5px;
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Homepage</title>
+        <style>
+            /* CSS styles for contact.html */
+            body {
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f4f4f4;
             }
-            /* Adjust section padding */
+            header {
+                background-color: #333;
+                color: #fff;
+                padding: 10px 2%;
+                text-align: center;
+            }
+            nav {
+                background-color: #444;
+                color: #fff;
+                text-align: center;
+                padding: 10px 2%;
+            }
+            nav a {
+                color: #fff;
+                text-decoration: none;
+                padding: 0 2%;
+            }
             section {
-                padding: 10px;
+                padding: 20px;
+                margin: 20px auto;
+                background-color: #fff;
+                border-radius: 5px;
+                width: 90%;
+                max-width: 800px; /* Limiting the maximum width for better readability */
+                box-sizing: border-box;
+                overflow-x: auto; /* Horizontal scrollbar if content overflows */
             }
-            /* Reduce font size for smaller screens */
-            footer, h1, h2, h3, p, a {
-                font-size: 14px;
+            footer {
+                background-color: #333;
+                color: #fff;
+                text-align: center;
+                padding: 10px 2%;
+                position: auto;
+                bottom: 0;
+                width: 100%;
+                box-sizing: border-box;
             }
-        }
-    </style>
-</head>
-<body>
-
-<nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">Trained model</a>
-    <a href="registration.html">Registration</a>
-    <a href="services.html">Services</a>
-    <a href="contact.html">Contact</a>
-</nav>
-
-<header>
-    <b>Optimizing Transmit Power in High-Frequency Communications: A Path Loss Prediction Approach
-</b>
-</header>
-<h1 style="text-align: center;">Welcome</h1>
-<div class="running-links">
-    <marquee behavior="scroll" direction="left">
-        <a href="IJIRT162332_PAPER.pdf">Published paper(IJIRT)</a> |
-        <a href="Chart.png">Error analysis comparision</a> |
-        <a href="comparision table.png">Comparision Chart</a> |
-        
-    </marquee>
-</div>
-<section id="home">
-    <div class="section">
+            #home h1 {
+                text-align: center;
+            }
+            .running-links {
+                padding: 10px 2%;
+                width: 90%;
+                max-width: 800px; /* Limiting the maximum width for better readability */
+                box-sizing: border-box;
+                margin: auto; /* Centering the element */
+            }
+            .running-links marquee {
+                width: 100%;
+            }
+    
+            /* Responsive CSS */
+            @media only screen and (max-width: 768px) {
+                /* Adjust header padding */
+                header, nav {
+                    padding: 5px;
+                }
+                /* Adjust section padding */
+                section {
+                    padding: 10px;
+                }
+                /* Reduce font size for smaller screens */
+                footer, h1, h2, h3, p, a {
+                    font-size: 14px;
+                }
+            }
+            
+            /* Align images and captions */
+            .image-container {
+                text-align: center;
+            }
+            .image-container img {
+                max-width: 100%;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">Trained model</a>
+        <a href="registration.html">Registration</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <header>
+        <b>Pathloss prediction Model</b>
+    </header>
+    <h1 style="text-align: center;">Welcome</h1>
+    <div class="running-links">
+        <marquee behavior="scroll" direction="left">
+            <a href="IJIRT162332_PAPER.pdf">Published paper(IJIRT)</a> |
+            <a href="Chart.png">Error analysis comparision</a> |
+            <a href="comparision table.png">Comparision Chart</a> |
+            
+        </marquee>
+    </div>
+    <section id="home">
+        <div class="section">
             <h2><u>About our project</u></h2>
-            <p>This paper presents an in-depth analysis of high-frequency uplink and downlink channel parameters, exploring their dynamics under varying K-factor conditions. The ratio of the power in the direct path to the power in the distributed paths, or K-factor, must be thoroughly understood in order to optimize performance in wireless communication systems. The study employs a comprehensive approach to investigate how different K-factor values influence key channel parameters in both uplink and downlink transmissions. Through systematic experimentation and analysis, the research sheds light on the variability of signal strength, delay spread, and other essential parameters across a spectrum of K-factor scenarios. The findings provide valuable insights into the nuanced interactions between K-factor and channel characteristics, offering a foundation for the development of adaptive communication systems that can dynamically adjust to diverse propagation environments. This research contributes to the refinement of high-frequency communication strategies, fostering advancements in the design and implementation of wireless networks for enhanced reliability and efficiency across a range of K-factor scenarios.</p>
+            <!-- Factors Chart -->
+            <div class="image-container">
+                <img src="Objective.png" alt="Objective of this project">
+            </div>
+
+
+            <p>This project presents an in-depth analysis of high-frequency uplink and downlink channel parameters, exploring their dynamics under varying K-factor conditions. The ratio of the power in the direct path to the power in the distributed paths, or K-factor, must be thoroughly understood in order to optimize performance in wireless communication systems. The study employs a comprehensive approach to investigate how different K-factor values influence key channel parameters in both uplink and downlink transmissions. Through systematic experimentation and analysis, the research sheds light on the variability of signal strength, delay spread, and other essential parameters across a spectrum of K-factor scenarios. The findings provide valuable insights into the nuanced interactions between K-factor and channel characteristics, offering a foundation for the development of adaptive communication systems that can dynamically adjust to diverse propagation environments. This research contributes to the refinement of high-frequency communication strategies, fostering advancements in the design and implementation of wireless networks for enhanced reliability and efficiency across a range of K-factor scenarios.</p>
             <p>We have conducted extensive research and analysis in the field of high-frequency uplink and downlink channel parameters, ranging from 900 MHz to 4 GHz, in a laboratory environment. Our findings shed light on the variation of the estimated K-factor in different frequency bands and channel conditions, providing valuable insights for the evaluation of high-frequency networks.</p>
             
+            
             <!-- System Model Image -->
-            <h3><u>System Model</u></h3>
-            <CENTER><img src="scenario.png" alt="System Model Image"></CENTER>
-            <figcaption class="caption"><center>Proposed Network Model</center></figcaption>
-    
+            <div class="image-container">
+                <img src="scenario1.png" alt="System Model Image">
+                <figcaption class="caption">Proposed Network Model</figcaption>
+            </div>
+                
             
             <!-- Properties Chart -->
-            <h3><u>Properties Chart</u></h3>
-            <CENTER><img src="propertics.png" alt="Properties Chart Image"></CENTER>
-    
+            <div class="image-container">
+                <img src="propertics.png" alt="Properties Chart Image">
+            </div>
+        
+            <!-- Factors Chart -->
+            <h3><u>Factors concidered for this model:</u></h3>
+            <div class="image-container">
+                <img src="Factors.png" alt="Factor concider for this model">
+            </div>
+
+            <!-- Factors Chart -->
+            <div class="image-container">
+                <img src="f1.png" alt="Factor concider for this model">
+            </div>
+            <!-- Factors Chart -->
+            <div class="image-container">
+                <img src="f2.png" alt="Factor concider for this model">
+            </div>
+        
+            <!-- procedure -->
+            <div class="image-container">
+                <img src="f3.png" alt="procedure">
+                <figcaption class="caption">Fig: Technology used for this project</figcaption>
+            </div>
+
+
             <!-- Result and Analysis -->
-            <h3><u>Result and Analysis</u></h3>
+            <h4><u>Result and Analysis</u></h4>
             <p>After varying the parameters, we made graph-based analysis:</p>
             <!-- Graphs -->
-            <img src="Picture1.png" alt="Graph 1" style="max-width: 100%;">
-            <figcaption class="caption"><CENTER><I>Fig: Path Loss Behavior during Communication through Uplink</CENTER></figcaption>
-    
-            <img src="Picture2.png" alt="Graph 2" style="max-width: 100%;">
-            <figcaption class="caption"><CENTER><I>Fig: Path Loss Behavior during Communication through Downlink</I></CENTER></figcaption>
-    
-            <img src="Picture3.png" alt="Graph 3" style="max-width: 100%;">
-            <figcaption class="caption"><CENTER><I>Fig: Packet Loss Variation w.r.t Signal Power during Uplink Communication</I></CENTER></figcaption>
-    
-            <img src="Picture4.png" alt="Graph 4" style="max-width: 100%;">
-            <figcaption class="caption"><CENTER><I>Fig: Packet Loss Variation w.r.t Signal Power during Downlink Communication</I></CENTER></figcaption>
-    
-            <img src="Picture5.png" alt="Graph 5" style="max-width: 100%;">
-            <figcaption class="caption"><CENTER><I>Fig: Transmission Delay variation w.r.t Frequency</I></CENTER></figcaption>
-    
-            
+            <div class="image-container">
+                <img src="Picture1.png" alt="Graph 1">
+                <figcaption class="caption">Fig: Path Loss Behavior during Communication through Uplink</figcaption>
+            </div>
+        
+            <div class="image-container">
+                <img src="Picture2.png" alt="Graph 2">
+                <figcaption class="caption">Fig: Path Loss Behavior during Communication through Downlink</figcaption>
+            </div>
+        
+            <div class="image-container">
+                <img src="Picture3.png" alt="Graph 3">
+                <figcaption class="caption">Fig: Packet Loss Variation w.r.t Signal Power during Uplink Communication</figcaption>
+            </div>
+        
+            <div class="image-container">
+                <img src="Picture4.png" alt="Graph 4">
+                <figcaption class="caption">Fig: Packet Loss Variation w.r.t Signal Power during Downlink Communication</figcaption>
+            </div>
+        
+            <div class="image-container">
+                <img src="Picture5.png" alt="Graph 5">
+                <figcaption class="caption">Fig: Transmission Delay variation w.r.t Frequency</figcaption>
+            </div>
+                
             <!-- Conclusions -->
-            <h3><B><u>Conclusions</u></B></h3>
+            <h5><B><u>Conclusions</u></B></h5>
             <p>This study provides a thorough analysis of the intricate dynamics of high-frequency uplink and downlink performance under
-                varying K-factor conditions. The K-factor, representing the relationship between direct and scattered power, plays a crucial
-                role in wireless communication systems, necessitating a comprehensive understanding of performance optimization. Through 
-                rigorous simulations and analysis, this work has significantly contributed to signal propagation characteristics, encompassing 
+            varying K-factor conditions. The K-factor, representing the relationship between direct and scattered power, plays a crucial
+            role in wireless communication systems, necessitating a comprehensive understanding of performance optimization. Through 
+            rigorous simulations and analysis, this work significantly contributed to signal propagation characteristics, encompassing 
                 aspects such as path loss, fading, and interference within the context of 5G networks. The study's conclusions not only illuminate 
                 the variability of signal strength and delay spread across a spectrum of K-factor scenarios but also deepen our understanding of 
                 the intricate connections between K-factor and channel parameters. The proposed network performs most efficiently while selecting
