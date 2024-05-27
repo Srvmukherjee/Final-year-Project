@@ -1,4 +1,6 @@
 <?php
+
+
 $servername = "localhost";
 $username = "your_username"; // Your MySQL username
 $password = "your_password"; // Your MySQL password

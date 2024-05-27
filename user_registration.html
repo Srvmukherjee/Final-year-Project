@@ -4,24 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>User Registration</title>
-    <!-- Your CSS styles here -->
+    <style>
+        /* CSS styles for registration.html */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 80%;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        form {
+            max-width: 400px;
+            margin: 0 auto;
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        input[type="text"],
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-top: 8px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        label {
+            font-weight: bold;
+        }
+        footer {
+            margin-top: 20px;
+        }
+        footer p {
+            color: #888;
+        }
+    </style>
 </head>
 <body>
 
-<h1>User Registration</h1>
+<h1><center>User Registration</center></h1>
 
-<form action="register_user.php" method="post">
-    <label for="username">Enter your Full Name:</label><br>
-    <input type="text" name="username" id="username" placeholder="John Doe"><br>
+<section>
+    <form action="register_user.php" method="post">
+        <label for="username">Enter your Full Name:</label><br>
+        <input type="text" name="username" id="username" placeholder="John Doe"><br>
 
-    <label for="email">Enter your Email:</label><br>
-    <input type="text" name="email" id="email" placeholder="john@example.com"><br>
+        <label for="email">Enter your Email:</label><br>
+        <input type="text" name="email" id="email" placeholder="john@example.com"><br>
 
-    <input type="submit" value="Submit">
-</form>
+        <input type="submit" value="Submit">
+    </form>
+</section>
 
 <footer>
-    &copy; 2024 My Website. All rights reserved.
+    <p>&copy; 2024 My Website. All rights reserved.</p>
 </footer>
 
 </body>

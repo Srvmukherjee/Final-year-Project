@@ -32,7 +32,7 @@
         section {
             padding: 20px;
             margin: 20px auto;
-            background-color: #fff;
+            background-color: rgba(255, 255, 255, 0.8); /* Transparent white */
             border-radius: 5px;
             width: 80%;
         }
@@ -44,6 +44,22 @@
             position: fixed;
             bottom: 0;
             width: 100%;
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+        .contact-info h2 {
+            margin-bottom: 10px;
+        }
+        .contact-info p {
+            margin: 5px 0;
+        }
+        .contact-info a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -61,12 +77,19 @@
     <h1>Contact Us</h1>
 </header>
 
-<section>
-    <h2>Contact Information</h2>
-    <h3>Sourav Mukherjee</h3>
-    <p>Email: souramukherjee1111999@gmail.com</p>
-    
-    
+<section class="contact-info">
+    <h2>Email</h2>
+    <p>souramukherjee1111999@gmail.com</p>
+</section>
+
+<section class="contact-info">
+    <h2>LinkedIn</h2>
+    <p><a href="https://www.linkedin.com/in/sourav-mukherjee-892177205">LinkedIn Profile</a></p>
+</section>
+
+<section class="contact-info">
+    <h2>GitHub</h2>
+    <p><a href="https://github.com/Srvmukherjee">GitHub Profile</a></p>
 </section>
 
 <footer>
