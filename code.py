@@ -55,9 +55,17 @@ with open('model.pkl', 'wb') as file:
 # Load the model (example of how to load and use the model)
 model = pickle.load(open('model.pkl', 'rb'))
 
-# Example input data for prediction
-# Assume the input values are provided from the website as follows
-input_data = [int(x) for x in "2,4,930,66.7092,5.12441,0.133312,246".split(' ')]  # Node No, K Value, Frequency, Avg Signal Power (dBm), Delay, Packet Loss
+# Sample input data as a string
+input_str = "2,4,930,66.7092,5.12441,0.133312"  # Adjusted to 6 features
+
+# Split the string by commas and convert to appropriate data types
+input_data = [float(x) for x in input_str.split(',')]
+
+# Ensure the nodeNo and kValue are integers
+input_data[0] = int(input_data[0])
+input_data[1] = int(input_data[1])
+
+# Convert the list to a NumPy array and reshape for the model
 input_array = np.array([input_data])
 
 # Predict the pathloss for the example input data
