@@ -26,9 +26,10 @@ def predict():
 
     # Predict pathloss
     prediction = model.predict(input_data)
-    output = prediction[0]
+    predicted_pathloss = prediction[0]
 
-    return jsonify({'prediction': output})
+    # Return the prediction as JSON
+    return jsonify({'prediction': predicted_pathloss})
 
 if __name__ == '__main__':
     app.run(debug=True)
