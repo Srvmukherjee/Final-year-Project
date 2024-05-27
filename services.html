@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -102,6 +101,8 @@
     </form>
     
     <div id="predictionResult"></div>
+    
+
 </section>
 
 <footer>
@@ -137,6 +138,22 @@
         };
         xhr.send(JSON.stringify(data));
     }
+</script>
+
+<script>
+    // Load the model
+    var model;
+
+    async function loadModel() {
+        const response = await fetch('model.pkl');
+        const modelFile = await response.arrayBuffer();
+        model = await tf.loadLayersModel(tf.io.browserFiles([new File([modelFile], 'model.pkl')]));
+    }
+
+    // Load the model when the page is loaded
+    window.onload = function() {
+        loadModel();
+    };
 </script>
 
 </body>
