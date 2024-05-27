@@ -79,22 +79,22 @@
     <h2>Services</h2>
     <form id="predictionForm">
         <label for="nodeNo">Node No:</label>
-        <input type="text" id="nodeNo" name="nodeNo" required><br><br>
+        <input type="number" id="nodeNo" name="nodeNo" required><br><br>
 
         <label for="kValue">K Value:</label>
-        <input type="text" id="kValue" name="kValue" required><br><br>
+        <input type="number" id="kValue" name="kValue" required><br><br>
 
         <label for="frequency">Frequency:</label>
-        <input type="text" id="frequency" name="frequency" required><br><br>
+        <input type="number" id="frequency" name="frequency" required><br><br>
 
         <label for="signalPower">Avg Signal Power (dBm):</label>
-        <input type="text" id="signalPower" name="signalPower" required><br><br>
+        <input type="number" id="signalPower" name="signalPower" step="any" required><br><br>
 
         <label for="delay">Delay:</label>
-        <input type="text" id="delay" name="delay" required><br><br>
+        <input type="number" id="delay" name="delay" step="any" required><br><br>
 
         <label for="packetLoss">Packet Loss:</label>
-        <input type="text" id="packetLoss" name="packetLoss" required><br><br>
+        <input type="number" id="packetLoss" name="packetLoss" step="any" required><br><br>
 
         <button type="button" onclick="predictPathloss()">Predict Pathloss</button>
     </form>
