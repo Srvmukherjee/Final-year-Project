@@ -11,25 +11,28 @@ model = pickle.load(open('model.pkl', 'rb'))
 def home():
     return render_template("services.html")
 
-@app.route('/predict', methods=['POST'])
+@app.route('/predict', methods=['GET', 'POST'])
 def predict():
-    data = request.get_json()
-    nodeNo = float(data['nodeNo'])
-    kValue = float(data['kValue'])
-    frequency = float(data['frequency'])
-    signalPower = float(data['signalPower'])
-    delay = float(data['delay'])
-    packetLoss = float(data['packetLoss'])
+    if request.method == 'GET':
+        return render_template("predict.html")
+    elif request.method == 'POST':
+        data = request.get_json()
+        nodeNo = int(data['nodeNo'])
+        kValue = int(data['kValue'])
+        frequency = int(data['frequency'])
+        signalPower = float(data['signalPower'])
+        delay = float(data['delay'])
+        packetLoss = int(data['packetLoss'])
 
-    # Prepare the input data for prediction
-    input_data = np.array([[nodeNo, kValue, frequency, signalPower, delay, packetLoss]])
+        # Prepare the input data for prediction
+        input_data = np.array([[nodeNo, kValue, frequency, signalPower, delay, packetLoss]])
 
-    # Predict pathloss
-    prediction = model.predict(input_data)
-    predicted_pathloss = prediction[0]
+        # Predict pathloss
+        prediction = model.predict(input_data)
+        predicted_pathloss = prediction[0]
 
-    # Return the prediction as JSON
-    return jsonify({'prediction': predicted_pathloss})
+        # Return the prediction as JSON
+        return jsonify({'prediction': predicted_pathloss})
 
 if __name__ == '__main__':
     app.run(debug=True)

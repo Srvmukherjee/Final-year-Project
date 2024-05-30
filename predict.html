@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pathloss Prediction</title>
+    <style>
+        /* CSS styles for predict.html */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            padding-bottom: 50px; /* Adjusted padding to accommodate the fixed footer */
+        }
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            text-align: center;
+        }
+        nav {
+            background-color: #444;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 0 10px;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background-color: #fff;
+            border-radius: 5px;
+            width: 80%;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">Trained model</a>
+    <a href="registration.html">Registration</a>
+    <a href="services.html">Services</a>
+    <a href="contact.html">Contact</a>
+</nav>
+
+<header>
+    <h1>Pathloss Prediction</h1>
+</header>
+<section id="prediction">
+    <h2>Predict Pathloss</h2>
+    <form id="predictionForm">
+        <label for="nodeNo">Node No:</label>
+        <input type="number" id="nodeNo" name="nodeNo" required><br><br>
+
+        <label for="kValue">K Value:</label>
+        <input type="number" id="kValue" name="kValue" required><br><br>
+
+        <label for="frequency">Frequency:</label>
+        <input type="number" id="frequency" name="frequency" required><br><br>
+
+        <label for="signalPower">Avg Signal Power (dBm):</label>
+        <input type="number" id="signalPower" name="signalPower" step="any" required><br><br>
+
+        <label for="delay">Delay:</label>
+        <input type="number" id="delay" name="delay" step="any" required><br><br>
+
+        <label for="packetLoss">Packet Loss:</label>
+        <input type="number" id="packetLoss" name="packetLoss" step="any" required><br><br>
+
+        <button type="button" onclick="predictPathloss()">Predict Pathloss</button>
+    </form>
+    <div id="predictionResult"></div>
+</section>
+
+<footer>
+    <p>&copy; 2024 My Website. All rights reserved.</p>
+</footer>
+
+<script>
+    function predictPathloss() {
+        var nodeNo = document.getElementById("nodeNo").value;
+        var kValue = document.getElementById("kValue").value;
+        var frequency = document.getElementById("frequency").value;
+        var signalPower = document.getElementById("signalPower").value;
+        var delay = document.getElementById("delay").value;
+        var packetLoss = document.getElementById("packetLoss").value;
+
+        var data = {
+            nodeNo: nodeNo,
+            kValue: kValue,
+            frequency: frequency,
+            signalPower: signalPower,
+            delay: delay,
+            packetLoss: packetLoss
+        };
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "/predict", true);
+        xhr.setRequestHeader("Content-Type", "application/json");
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4) {
+                if (xhr.status === 200) {
+                    var response = JSON.parse(xhr.responseText);
+                    document.getElementById("predictionResult").innerHTML = "Predicted Pathloss: " + response.prediction;
+                } else {
+                    document.getElementById("predictionResult").innerHTML = "Error: Failed to get prediction.";
+                }
+            }
+        };
+
+        xhr.onerror = function () {
+            document.getElementById("predictionResult").innerHTML = "Error: Network error.";
+        };
+
+        xhr.send(JSON.stringify(data));
+    }
+</script>
+
+</body>
+</html>

@@ -51,28 +51,3 @@ model = stacking_reg.fit(X_train, y_train)
 # Save the model to disk
 with open('model.pkl', 'wb') as file:
     pickle.dump(model, file)
-
-# Load the model (example of how to load and use the model)
-model = pickle.load(open('model.pkl', 'rb'))
-
-# Sample input data as a string
-input_str = "2,4,930,66.7092,5.12441,242"  # Adjusted to 6 features
-
-# Split the string by commas and convert to appropriate data types
-input_data = [float(x) for x in input_str.split(',')]
-
-# Ensure the nodeNo and kValue are integers
-input_data[0] = int(input_data[0])
-input_data[1] = int(input_data[1])
-input_data[2] = int(input_data[2])
-input_data[3] = float(input_data[3])
-input_data[4] = float(input_data[4])
-input_data[5] = int(input_data[5])
-
-
-# Convert the list to a NumPy array and reshape for the model
-input_array = np.array([input_data])
-
-# Predict the pathloss for the example input data
-prediction = model.predict(input_array)
-print(f'Predicted Pathloss: {prediction[0]}')

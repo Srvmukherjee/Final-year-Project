@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Registration</title>
+    <title>Admin LOGIN</title>
     <style>
         /* CSS styles for admin_registration.html */
         body {
@@ -48,18 +48,22 @@
             background-color: #0056b3;
         }
         footer {
+            background-color: #333;
+            color: #fff;
             text-align: center;
-            margin-top: 20px;
-            color: #888;
+            padding: 10px 20px;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
 
-<h1>Admin Registration</h1>
+<h1>Admin Log in</h1>
 
 <form action="register_admin.php" method="post">
-    <label for="admin_username">Enter your Username:</label><br>
+    <label for="admin_username">Enter your Admin ID:</label><br>
     <input type="text" name="admin_username" id="admin_username" placeholder="Admin"><br>
 
     <label for="admin_password">Enter your Password:</label><br>
@@ -69,7 +73,7 @@
 </form>
 
 <footer>
-    &copy; 2024 My Website. All rights reserved.
+    <p>&copy; 2024 My Website. All rights reserved.</p>
 </footer>
 
 </body>
